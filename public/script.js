@@ -3,7 +3,7 @@ document.getElementById('feedbackForm').addEventListener('submit', async functio
     const formData = new FormData(this);
 
     try {
-        const response = await fetch('http://localhost:3000/api/feedback', {
+        const response = await fetch('/api/feedback', {
             method: 'POST',
             body: formData,
         });
