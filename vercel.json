@@ -1,10 +1,11 @@
 {
   "rewrites": [
-    { "source": "/(.*)", "destination": "/server.js" }
+    { "source": "/api/(.*)", "destination": "/server.js" },  
+    { "source": "/(.*)", "destination": "/public/$1" }     
   ],
   "functions": {
     "server.js": {
-      "runtime": "nodejs@20.10.0" 
+      "runtime": "nodejs@20.10.0"
     }
   }
 }
