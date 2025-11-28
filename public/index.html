@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>教辅信息收集工具</title>
+</head>
+<body>
+    <h1>上传教辅信息</h1>
+    <form id="feedbackForm">
+        <label for="device_serial">设备序列号:</label>
+        <input type="text" id="device_serial" name="device_serial" placeholder="70303D08511200091" required>
+        
+        <label for="phone_number">手机号:</label>
+        <input type="tel" id="phone_number" name="phone_number" pattern="[0-9]{11}" required>
+        
+        <label for="isbn">ISBN:</label>
+        <input type="text" id="isbn" name="isbn" required>
+        <button type="button">扫描</button>
+        
+        <label for="cover">添加封皮:</label>
+        <input type="file" id="cover" name="cover" accept="image/*" required>
+        
+        <label for="copyright">添加版权页（可选）:</label>
+        <input type="file" id="copyright" name="copyright" accept="image/*">
+        
+        <button type="submit">提交</button>
+    </form>
+    <div id="message"></div>
+    <script src="script.js"></script>
+</body>
+</html>
