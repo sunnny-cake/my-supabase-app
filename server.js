@@ -55,7 +55,11 @@ app.post('/api/feedback', upload.fields([{ name: 'cover' }, { name: 'copyright' 
     }
 });
 
-const PORT = process.env.PORT || 3000;
-app.listen(PORT, () => {
-    console.log(`Server is running on http://localhost:${PORT}`);
-});
+// 【关键修改：删除本地监听，导出Express实例给Vercel用】
+// 注释/删除原来的 app.listen 部分
+// const PORT = process.env.PORT || 3000;
+// app.listen(PORT, () => {
+//     console.log(`Server is running on http://localhost:${PORT}`);
+// });
+
+module.exports = app;
