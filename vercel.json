@@ -4,7 +4,7 @@
   ],
   "functions": {
     "server.js": {
-      "runtime": "nodejs@20.x"
+      "runtime": "nodejs@20.10.0" 
     }
   }
 }
